@@ -33,7 +33,7 @@
       </button>
 
       <div class="navbar navbar-collapse" id="navbarNavDropdown">
-        <!-- end button menu - but also include with the DIV the Unhordered List -->
+        <!-- end button menu - but also remember to include with a DIV the Unhordered List (menu) -->
         <ul class="navbar-nav mr-auto">
           <li class="active nav-item mr-2">
             <a href="/" class="nav-link">Home</a>
@@ -97,7 +97,13 @@
               <span class="d-inline d-sm-none"><br /></span>
               <strong><mark>First one is free!</mark></strong>
             </p>
-            <button class="btn btn-success btn-lg">Sign Up!</button>
+            <button
+              class="btn btn-success btn-lg"
+              data-toggle="modal"
+              data-target="#signUpModal"
+            >
+              Sign Up!
+            </button>
             <p class="text-muted">
               <small
                 >You must be over 18 to sign up to our service. Please, drink
@@ -123,7 +129,7 @@
               <div class="d-none d-sm-block">
                 <!-- prettier-ignore -->
                 <img
-                src="assets/images/girl-image.png"
+                src="images/girl-image.png"
                 alt="girl image"
                 class="rounded-circle mr-3"
                 height="100"
@@ -146,7 +152,7 @@
               <div class="d-none d-sm-block">
                 <!-- prettier-ignore -->
                 <img
-                src="assets/images/guy-image.png"
+                src="images/guy-image.png"
                 alt="girl image"
                 class="rounded-circle mr-3"
                 height="100"
@@ -259,6 +265,68 @@
       </section>
       <!--/Monthly Favorites-->
     </article>
+    <!--Modal dialog content
+Inside our signup button add two new attributes.
+First, data-toggle="modal" so that will trigger a MODAL DIALOG somewhere on the page.
+Second, add data-target="" indicate an ID created by me, #signupModal, which will link our button (Sign Up!) to the modal that we created.
+-->
+    <div class="modal" tabindex="-1" role="dialog" id="signUpModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sign Up to Whiskey Drop!</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!--Add a Form-->
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="Password1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="Password1"
+                  placeholder="Password"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="repeatPassword">Repeat Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="repeatPassword"
+                  placeholder="Repeat Password"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
