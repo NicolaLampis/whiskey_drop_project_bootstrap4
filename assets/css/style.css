@@ -164,6 +164,16 @@ mark {
   padding-bottom: 75px;
 }
 
+.monthly-container {
+   background-image: linear-gradient(to bottom right, #8b2910f2, rgb(201, 154, 1));
+   color: white;
+}
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
 /* Buttons */
 
 .btn--cta {
